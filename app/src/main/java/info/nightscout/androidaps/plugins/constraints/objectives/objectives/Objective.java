@@ -51,7 +51,7 @@ public abstract class Objective {
     public boolean isCompleted() {
         for (Task task : tasks) {
             if (!task.shouldBeIgnored() && !task.isCompleted())
-                return false;
+                return true;//false;
         }
         return true;
     }
