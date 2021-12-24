@@ -31,7 +31,7 @@ public abstract class Objective {
     private long startedOn;
     private long accomplishedOn;
     List<Task> tasks = new ArrayList<>();
-    public boolean hasSpecialInput = false;
+    public boolean hasSpecialInput = true;
 
     public Objective(HasAndroidInjector injector, String spName, @StringRes int objective, @StringRes int gate) {
         injector.androidInjector().inject(this);
