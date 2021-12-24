@@ -36,19 +36,19 @@ public class Objective0 extends Objective {
         tasks.add(new Task(R.string.objectives_bgavailableinns) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false);
+                return true;//sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false);
             }
         });
         tasks.add(new Task(R.string.nsclienthaswritepermission) {
             @Override
             public boolean isCompleted() {
-                return nsClientPlugin.hasWritePermission();
+                return true;//nsClientPlugin.hasWritePermission();
             }
         });
         tasks.add(new Task(R.string.virtualpump_uploadstatus_title) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_virtualpump_uploadstatus, false);
+                return true;//sp.getBoolean(R.string.key_virtualpump_uploadstatus, false);
             }
 
             @Override
@@ -59,32 +59,32 @@ public class Objective0 extends Objective {
         tasks.add(new Task(R.string.objectives_pumpstatusavailableinns) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false);
+                return true;//sp.getBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false);
             }
         });
         tasks.add(new Task(R.string.hasbgdata) {
             @Override
             public boolean isCompleted() {
-                return iobCobCalculatorPlugin.lastBg() != null;
+                return true;//iobCobCalculatorPlugin.lastBg() != null;
             }
         });
         tasks.add(new Task(R.string.loopenabled) {
             @Override
             public boolean isCompleted() {
-                return loopPlugin.isEnabled(PluginType.LOOP);
+                return true;//loopPlugin.isEnabled(PluginType.LOOP);
             }
         });
         tasks.add(new Task(R.string.apsselected) {
             @Override
             public boolean isCompleted() {
                 APSInterface usedAPS = activePlugin.getActiveAPS();
-                return ((PluginBase) usedAPS).isEnabled(PluginType.APS);
+                return true;//((PluginBase) usedAPS).isEnabled(PluginType.APS);
             }
         });
         tasks.add(new Task(R.string.activate_profile) {
             @Override
             public boolean isCompleted() {
-                return treatmentsPlugin.getProfileSwitchFromHistory(DateUtil.now()) != null;
+                return true;//treatmentsPlugin.getProfileSwitchFromHistory(DateUtil.now()) != null;
             }
         });
     }

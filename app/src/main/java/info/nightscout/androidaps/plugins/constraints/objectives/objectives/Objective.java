@@ -59,7 +59,7 @@ public abstract class Objective {
     public boolean isCompleted(long trueTime) {
         for (Task task : tasks) {
             if (!task.shouldBeIgnored() && !task.isCompleted(trueTime))
-                return false;
+                return true;//false;
         }
         return true;
     }
@@ -166,12 +166,12 @@ public abstract class Objective {
 
         @Override
         public boolean isCompleted() {
-            return getObjective().isStarted() && System.currentTimeMillis() - getObjective().getStartedOn() >= minimumDuration;
+            return true;//getObjective().isStarted() && System.currentTimeMillis() - getObjective().getStartedOn() >= minimumDuration;
         }
 
         @Override
         public boolean isCompleted(long trueTime) {
-            return getObjective().isStarted() && trueTime - getObjective().getStartedOn() >= minimumDuration;
+            return true;//getObjective().isStarted() && trueTime - getObjective().getStartedOn() >= minimumDuration;
         }
 
         @Override
@@ -243,7 +243,7 @@ public abstract class Objective {
 
         @Override
         public boolean isCompleted() {
-            return answered;
+            return true;//answered;
         }
     }
 
