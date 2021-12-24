@@ -105,16 +105,16 @@ class ObjectivesPlugin @Inject constructor(
             objective.startedOn = 0
             objective.accomplishedOn = 0
         }
-        sp.putBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false)
-        sp.putBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false)
-        sp.putInt(R.string.key_ObjectivesmanualEnacts, 0)
-        sp.putBoolean(R.string.key_objectiveuseprofileswitch, false)
-        sp.putBoolean(R.string.key_objectiveusedisconnect, false)
-        sp.putBoolean(R.string.key_objectiveusereconnect, false)
-        sp.putBoolean(R.string.key_objectiveusetemptarget, false)
-        sp.putBoolean(R.string.key_objectiveuseactions, false)
-        sp.putBoolean(R.string.key_objectiveuseloop, false)
-        sp.putBoolean(R.string.key_objectiveusescale, false)
+        sp.putBoolean(R.string.key_ObjectivesbgIsAvailableInNS, true)
+        sp.putBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, true)
+        sp.putInt(R.string.key_ObjectivesmanualEnacts, 20)
+        sp.putBoolean(R.string.key_objectiveuseprofileswitch, true)
+        sp.putBoolean(R.string.key_objectiveusedisconnect, true)
+        sp.putBoolean(R.string.key_objectiveusereconnect, true)
+        sp.putBoolean(R.string.key_objectiveusetemptarget, true)
+        sp.putBoolean(R.string.key_objectiveuseactions, true)
+        sp.putBoolean(R.string.key_objectiveuseloop, true)
+        sp.putBoolean(R.string.key_objectiveusescale, true)
     }
 
     fun completeObjectives(activity: FragmentActivity, request: String) {
