@@ -28,6 +28,6 @@ class NSClientPluginTest : TestBase() {
     }
 
     @Test fun advancedFilteringSupported() {
-        Assert.assertEquals(false, nsClientSourcePlugin.advancedFilteringSupported())
+        Assert.assertEquals(true, nsClientSourcePlugin.advancedFilteringSupported())
     }
 }
