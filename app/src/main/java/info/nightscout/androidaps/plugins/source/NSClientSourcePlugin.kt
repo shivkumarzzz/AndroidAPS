@@ -50,7 +50,7 @@ class NSClientSourcePlugin @Inject constructor(
     }
 
     override fun advancedFilteringSupported(): Boolean {
-        return isAdvancedFilteringEnabled
+        return true //return isAdvancedFilteringEnabled
     }
 
     override fun handleNewData(intent: Intent) {
